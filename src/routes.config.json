@@ -1,0 +1,21 @@
+[
+  {
+    "icon": "dashboard",
+    "title": "Dashboard",
+    "route": "/dashboard"
+  },
+  {
+    "title": "Components",
+    "route": "/components",
+    "children": [
+      {
+        "title": "Tabs",
+        "route": "/tabs"
+      },
+      {
+        "title": "Cards",
+        "route": "/cards"
+      }
+    ]
+  }
+]
