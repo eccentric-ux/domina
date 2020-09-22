@@ -5,8 +5,9 @@
     "route": "/dashboard"
   },
   {
-    "title": "Components",
-    "route": "/components",
+    "title": "Elements",
+    "icon": "settings",
+    "route": "/elements",
     "children": [
       {
         "title": "Tabs",
@@ -20,6 +21,7 @@
   },
   {
     "title": "Pages",
+    "icon": "web",
     "route": "/pages",
     "children": [
       {
