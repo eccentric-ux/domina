@@ -15,6 +15,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
+    height: "calc(100vh - 64px)"
   },
   pane: {
     flex: 1,
