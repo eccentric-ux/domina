@@ -50,7 +50,7 @@ export default {
     disabled: colors.blueGrey[300],
   },
   background: {
-    default: white,
+    default: "#F4F6F8",
     paper: white,
   },
   icon: colors.blueGrey[600],
