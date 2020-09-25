@@ -5,7 +5,7 @@ import Drawer from "@material-ui/core/Drawer";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
-import Divider from "@material-ui/core/Divider";
+import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
 import { Link } from "react-router-dom";
 import List from "@material-ui/core/List";
@@ -80,6 +80,14 @@ const useStyles = makeStyles((theme) => ({
   nested: {
     paddingLeft: theme.spacing(10),
   },
+  title: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center'
+  },
+  list: {
+    marginTop: "1rem"
+  }
 }));
 
 function SubMenu({ route, classes, disableParentLink }) {
@@ -147,8 +155,8 @@ function CustomDrawer({ routes = [], logo, disableParentLink = false }) {
       }}
     >
       {logo}
-      <Divider />
-      <List>
+      {open  && <Typography variant="h4" className={classes.title}>Eccentric UX</Typography>}
+      <List className={classes.list}>
         {routes.map((route, index) => (
           <SubMenu
             route={route}
