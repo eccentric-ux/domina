@@ -1,4 +1,5 @@
 import React from "react";
+import clsx from 'clsx';
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -8,6 +9,9 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+  },
+  topCards: {
+    borderTop: "4px solid blue"
   },
   paper: {
     padding: theme.spacing(2),
@@ -35,7 +39,7 @@ function Dashboard() {
     <div className={classes.root}>
       <Grid container spacing={3}>
         <Grid item xs={4}>
-          <Card className={classes.root}>
+          <Card className={clsx(classes.root, classes.topCards)}>
             <CardContent>
               <Typography
                 className={classes.title}
@@ -59,7 +63,7 @@ function Dashboard() {
           </Card>
         </Grid>
         <Grid item xs={4}>
-          <Card className={classes.root}>
+          <Card className={clsx(classes.root, classes.topCards)}>
             <CardContent>
               <Typography
                 className={classes.title}
@@ -83,7 +87,7 @@ function Dashboard() {
           </Card>
         </Grid>
         <Grid item xs={4}>
-          <Card className={classes.root}>
+          <Card className={clsx(classes.root, classes.topCards)}>
             <CardContent>
               <Typography
                 className={classes.title}
