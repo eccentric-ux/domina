@@ -5,8 +5,13 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 function Router() {
   const routes = [
     {
-      path: "/dashboard",
-      component: lazy(() => import("./routes/dashboard/"))
+      path: "/",
+      component: lazy(() => import("./routes/dashboard/")),
+      exact: true
+    },
+    {
+      path: "*",
+      component: lazy(()  => import("./pages/404"))
     }
   ];
   return (

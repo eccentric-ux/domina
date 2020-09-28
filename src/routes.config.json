@@ -2,7 +2,7 @@
   {
     "icon": "dashboard",
     "title": "Dashboard",
-    "route": "/dashboard"
+    "route": "/"
   },
   {
     "title": "Elements",
