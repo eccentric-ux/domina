@@ -10,6 +10,11 @@ function Router() {
       exact: true
     },
     {
+      path: "/tabs",
+      component: lazy(() => import("./routes/tabs/")),
+      exact: true
+    },
+    {
       path: "*",
       component: lazy(()  => import("./pages/404"))
     }
