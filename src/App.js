@@ -30,6 +30,9 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(7),
     height: theme.spacing(7),
   },
+  appbar: {
+    background: 'white'
+  }
 }));
 
 const logo = (classes) => (
@@ -48,9 +51,9 @@ export default function App({ children }) {
     <div className={classes.root}>
       <Drawer routes={routes} disableParentLink logo={logo(classes)} />
       <div className={classes.pane}>
-        <AppBar position="static">
+        <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h6" noWrap>
+            <Typography variant="h5" noWrap>
               Theme
             </Typography>
           </Toolbar>
