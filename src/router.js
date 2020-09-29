@@ -5,9 +5,9 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const lazyLoadModule = (url) => lazy(async () => {
+  //wierd bug with react need to pass url as string template.
   const module = await import(`${url}`);
   await delay(3000);
-  //wierd bug with react need to pass url as string template.
   return module;
 });
 
