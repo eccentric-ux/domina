@@ -95,6 +95,9 @@ const useStyles = makeStyles((theme) => ({
   selected: {
     backgroundColor: "rgba(0, 0, 0, 0.09)",
     borderLeft: "6px solid rgb(108, 99, 255)",
+    '& .route-title > span': {
+      fontWeight: 'bolder'
+    },
     '& .icon': {
       "fontFamily": "'Material Icons'",
       "fontWeight": "normal",
@@ -134,7 +137,7 @@ function SubMenu({ route, classes, disableParentLink }) {
         <ListItemIcon>
           {route.icon && <Icon className="icon material-icons-outlined">{route.icon}</Icon>}
         </ListItemIcon>
-        <ListItemText primary={route.title} />
+        <ListItemText primary={route.title} className="route-title" />
         {route.children &&
           (open ? <Icon>expand_less</Icon> : <Icon>expand_more</Icon>)}
       </ListItem>
@@ -152,7 +155,7 @@ function SubMenu({ route, classes, disableParentLink }) {
                 value={element.route}
                 className={classes.nested}
               >
-                <ListItemText primary={element.title} />
+                <ListItemText primary={element.title} className="route-title" />
               </ListItem>
             ))}
           </List>
