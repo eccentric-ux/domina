@@ -34,6 +34,8 @@ const useStyles = makeStyles((theme) => ({
   },
   appbar: {
     background: "white",
+    boxShadow:
+      "0px 6px 7px -4px rgba(182,186,191,0.2), 0px 11px 15px 1px rgba(182,186,191,0.18), 0px 4px 20px 3px rgba(182,186,191,0.16)",
   },
   actions: {
     position: "absolute",
@@ -64,10 +66,13 @@ export default function App({ children }) {
             </Typography>
             <div className={classes.actions}>
               <IconButton>
-                <Icon>bell</Icon>
+                <Icon>stacked_line_chart</Icon>
               </IconButton>
               <IconButton>
-                <Icon>input</Icon>
+                <Icon>notifications_none</Icon>
+              </IconButton>
+              <IconButton>
+                <Icon>exit_to_app</Icon>
               </IconButton>
             </div>
           </Toolbar>

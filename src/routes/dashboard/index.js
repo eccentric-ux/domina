@@ -11,8 +11,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   topCards: {
-    borderTop: "4px solid",
+    borderTop: "3px solid",
     borderColor: theme.palette.primary.main,
+    boxShadow:
+      "0px 6px 7px -4px rgba(182,186,191,0.1), 0px 11px 15px 1px rgba(182,186,191,0.11), 0px 4px 20px 3px rgba(182,186,191,0.12)",
   },
   paper: {
     padding: theme.spacing(2),
@@ -29,6 +31,11 @@ const useStyles = makeStyles((theme) => ({
   },
   pos: {
     marginBottom: 12,
+  },
+  bottomCards: {
+    boxShadow:
+      "0px 6px 7px -4px rgba(182,186,191,0.1), 0px 11px 15px 1px rgba(182,186,191,0.11), 0px 4px 20px 3px rgba(182,186,191,0.12)",
+    marginTop: theme.spacing(2),
   },
 }));
 
@@ -138,7 +145,7 @@ function Dashboard() {
       </Grid>
       <Grid container spacing={4}>
         <Grid item xs={6}>
-          <Card className={classes.root}>
+          <Card className={clsx(classes.root, classes.bottomCards)}>
             <CardContent>
               <Typography
                 className={classes.title}
@@ -162,7 +169,7 @@ function Dashboard() {
           </Card>
         </Grid>
         <Grid item xs={6}>
-          <Card className={classes.root}>
+          <Card className={clsx(classes.root, classes.bottomCards)}>
             <CardContent>
               <Typography
                 className={classes.title}
