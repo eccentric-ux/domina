@@ -62,7 +62,7 @@ export default function App({ children }) {
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
             <Typography variant="h5" noWrap>
-              Theme
+              Domina
             </Typography>
             <div className={classes.actions}>
               <IconButton>
