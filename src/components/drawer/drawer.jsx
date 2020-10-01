@@ -77,8 +77,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  menuItem: {
+    borderLeft: "6px solid transparent"
+  },
   nested: {
     paddingLeft: theme.spacing(10),
+    borderLeft: "6px solid transparent"
   },
   title: {
     display: 'flex',
@@ -90,6 +94,7 @@ const useStyles = makeStyles((theme) => ({
   },
   selected: {
     backgroundColor: "rgba(0, 0, 0, 0.09)",
+    borderLeft: "6px solid rgb(108, 99, 255)",
     '& .icon': {
       "fontFamily": "'Material Icons'",
       "fontWeight": "normal",
@@ -125,7 +130,7 @@ function SubMenu({ route, classes, disableParentLink }) {
 
   return (
     <>
-      <ListItem button onClick={handleOpen} {...parentProps}>
+      <ListItem button onClick={handleOpen} className={classes.menuItem} {...parentProps}>
         <ListItemIcon>
           {route.icon && <Icon className="icon material-icons-outlined">{route.icon}</Icon>}
         </ListItemIcon>
