@@ -89,7 +89,23 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1rem"
   },
   selected: {
-    backgroundColor: "rgba(0, 0, 0, 0.09)"
+    backgroundColor: "rgba(0, 0, 0, 0.09)",
+    '& .icon': {
+      "fontFamily": "'Material Icons'",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "fontSize": "24px",
+      "lineHeight": "1",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "inline-block",
+      "whiteSpace": "nowrap",
+      "wordWrap": "normal",
+      "direction": "ltr",
+      "WebkitFontFeatureSettings": "'liga'",
+      "WebkitFontSmoothing": "antialiased",
+      "color": theme.palette.primary.main
+    }
   }
 }));
 
@@ -111,7 +127,7 @@ function SubMenu({ route, classes, disableParentLink }) {
     <>
       <ListItem button onClick={handleOpen} {...parentProps}>
         <ListItemIcon>
-          {route.icon && <Icon color="primary">{route.icon}</Icon>}
+          {route.icon && <Icon className="icon material-icons-outlined">{route.icon}</Icon>}
         </ListItemIcon>
         <ListItemText primary={route.title} />
         {route.children &&
