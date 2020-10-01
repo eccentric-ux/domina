@@ -1,5 +1,5 @@
 import React from "react";
-import clsx from 'clsx';
+import clsx from "clsx";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
@@ -11,7 +11,8 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   topCards: {
-    borderTop: "4px solid blue"
+    borderTop: "4px solid",
+    borderColor: theme.palette.primary.main,
   },
   paper: {
     padding: theme.spacing(2),

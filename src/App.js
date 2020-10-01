@@ -7,6 +7,8 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "./components/drawer";
 import routes from "./routes.config.json";
 import "./styles.css";
+import { IconButton } from "@material-ui/core";
+import Icon from "@material-ui/core/Icon";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -15,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    height: "calc(100vh - 64px)"
+    height: "calc(100vh - 64px)",
   },
   pane: {
     flex: 1,
@@ -31,8 +33,12 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(7),
   },
   appbar: {
-    background: 'white'
-  }
+    background: "white",
+  },
+  actions: {
+    position: "absolute",
+    right: theme.spacing(3),
+  },
 }));
 
 const logo = (classes) => (
@@ -56,6 +62,14 @@ export default function App({ children }) {
             <Typography variant="h5" noWrap>
               Theme
             </Typography>
+            <div className={classes.actions}>
+              <IconButton>
+                <Icon>bell</Icon>
+              </IconButton>
+              <IconButton>
+                <Icon>input</Icon>
+              </IconButton>
+            </div>
           </Toolbar>
         </AppBar>
         <main className={classes.content}>{children}</main>

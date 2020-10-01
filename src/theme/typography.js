@@ -1,4 +1,4 @@
-import  palette  from "./palette";
+import palette from "./palette";
 
 export default {
   h1: {
@@ -86,4 +86,17 @@ export default {
     lineHeight: "13px",
     textTransform: "uppercase",
   },
+  fontFamily: [
+    "Nunito",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    '"Segoe UI"',
+    "Roboto",
+    '"Helvetica Neue"',
+    "Arial",
+    "sans-serif",
+    '"Apple Color Emoji"',
+    '"Segoe UI Emoji"',
+    '"Segoe UI Symbol"',
+  ].join(","),
 };
