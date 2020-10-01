@@ -7,7 +7,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import Icon from "@material-ui/core/Icon";
 import Collapse from "@material-ui/core/Collapse";
@@ -87,6 +87,9 @@ const useStyles = makeStyles((theme) => ({
   },
   list: {
     marginTop: "1rem"
+  },
+  selected: {
+    backgroundColor: "rgba(0, 0, 0, 0.09)"
   }
 }));
 
@@ -100,6 +103,8 @@ function SubMenu({ route, classes, disableParentLink }) {
           component: Link,
           to: route.route,
           value: route.route,
+          activeClassName: classes.selected,
+          exact: true
         };
 
   return (
@@ -120,6 +125,8 @@ function SubMenu({ route, classes, disableParentLink }) {
                 button
                 key={key}
                 component={Link}
+                activeClassName={classes.selected}
+                exact={true}
                 to={element.route}
                 value={element.route}
                 className={classes.nested}
