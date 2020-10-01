@@ -149,7 +149,7 @@ function Dashboard() {
                     SALES
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
-                    <CountUp end={1200} prefix="$ " separator="," />
+                    <CountUp end={1200} prefix="$" separator="," />
                   </Typography>
                 </Grid>
               </Grid>
