@@ -7,7 +7,7 @@ import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import { Link } from "react-router-dom";
+import { NavLink as Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 import Icon from "@material-ui/core/Icon";
 import Collapse from "@material-ui/core/Collapse";
@@ -77,8 +77,12 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     padding: theme.spacing(3),
   },
+  menuItem: {
+    borderLeft: "6px solid transparent"
+  },
   nested: {
     paddingLeft: theme.spacing(10),
+    borderLeft: "6px solid transparent"
   },
   title: {
     display: 'flex',
@@ -87,6 +91,29 @@ const useStyles = makeStyles((theme) => ({
   },
   list: {
     marginTop: "1rem"
+  },
+  selected: {
+    backgroundColor: "rgba(0, 0, 0, 0.09)",
+    borderLeft: "6px solid rgb(108, 99, 255)",
+    '& .route-title > span': {
+      fontWeight: 'bolder'
+    },
+    '& .icon': {
+      "fontFamily": "'Material Icons'",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "fontSize": "24px",
+      "lineHeight": "1",
+      "letterSpacing": "normal",
+      "textTransform": "none",
+      "display": "inline-block",
+      "whiteSpace": "nowrap",
+      "wordWrap": "normal",
+      "direction": "ltr",
+      "WebkitFontFeatureSettings": "'liga'",
+      "WebkitFontSmoothing": "antialiased",
+      "color": theme.palette.primary.main
+    }
   }
 }));
 
@@ -100,15 +127,17 @@ function SubMenu({ route, classes, disableParentLink }) {
           component: Link,
           to: route.route,
           value: route.route,
+          activeClassName: classes.selected,
+          exact: true
         };
 
   return (
     <>
-      <ListItem button onClick={handleOpen} {...parentProps}>
+      <ListItem button onClick={handleOpen} className={classes.menuItem} {...parentProps}>
         <ListItemIcon>
-          {route.icon && <Icon color="primary">{route.icon}</Icon>}
+          {route.icon && <Icon className="icon material-icons-outlined">{route.icon}</Icon>}
         </ListItemIcon>
-        <ListItemText primary={route.title} />
+        <ListItemText primary={route.title} className="route-title" />
         {route.children &&
           (open ? <Icon>expand_less</Icon> : <Icon>expand_more</Icon>)}
       </ListItem>
@@ -120,11 +149,13 @@ function SubMenu({ route, classes, disableParentLink }) {
                 button
                 key={key}
                 component={Link}
+                activeClassName={classes.selected}
+                exact={true}
                 to={element.route}
                 value={element.route}
                 className={classes.nested}
               >
-                <ListItemText primary={element.title} />
+                <ListItemText primary={element.title} className="route-title" />
               </ListItem>
             ))}
           </List>
