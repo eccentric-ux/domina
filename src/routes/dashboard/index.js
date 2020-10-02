@@ -39,7 +39,6 @@ const useStyles = makeStyles((theme) => ({
   },
   topCards: {
     borderTop: "4px solid",
-    //borderColor: theme.palette.primary.main,
     boxShadow:
       "0px 6px 7px -4px rgba(182,186,191,0.1), 0px 11px 15px 1px rgba(182,186,191,0.11), 0px 4px 20px 3px rgba(182,186,191,0.12)",
   },
@@ -75,8 +74,8 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column"
-  }
+    flexDirection: "column",
+  },
 }));
 
 function Dashboard() {
@@ -94,20 +93,21 @@ function Dashboard() {
               <Grid container>
                 <Grid item xs={4}>
                   <Avatar className={clsx(classes.large, classes.yellowAvatar)}>
-                  <Icon
-                    className={clsx(
-                      classes.cardIcon,
-                      "material-icons-outlined"
-                    )}
-                  >
-                    group
-                  </Icon>
+                    <Icon
+                      className={clsx(
+                        classes.cardIcon,
+                        "material-icons-outlined"
+                      )}
+                    >
+                      group
+                    </Icon>
                   </Avatar>
                 </Grid>
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4" component="h4" 
+                    variant="h4"
+                    component="h4"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -129,20 +129,21 @@ function Dashboard() {
               <Grid container>
                 <Grid item xs={4}>
                   <Avatar className={clsx(classes.large, classes.greenAvatar)}>
-                  <Icon
-                    className={clsx(
-                      classes.cardIcon,
-                      "material-icons-outlined"
-                    )}
-                  >
-                    receipt
-                  </Icon>
+                    <Icon
+                      className={clsx(
+                        classes.cardIcon,
+                        "material-icons-outlined"
+                      )}
+                    >
+                      receipt
+                    </Icon>
                   </Avatar>
                 </Grid>
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4" component="h4" 
+                    variant="h4"
+                    component="h4"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -164,20 +165,21 @@ function Dashboard() {
               <Grid container>
                 <Grid item xs={4}>
                   <Avatar className={clsx(classes.large, classes.redAvatar)}>
-                  <Icon
-                    className={clsx(
-                      classes.cardIcon,
-                      "material-icons-outlined"
-                    )}
-                  >
-                    subscriptions
-                  </Icon>
+                    <Icon
+                      className={clsx(
+                        classes.cardIcon,
+                        "material-icons-outlined"
+                      )}
+                    >
+                      subscriptions
+                    </Icon>
                   </Avatar>
                 </Grid>
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4" component="h4" 
+                    variant="h4"
+                    component="h4"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -199,20 +201,21 @@ function Dashboard() {
               <Grid container>
                 <Grid item xs={4}>
                   <Avatar className={clsx(classes.large, classes.blueAvatar)}>
-                  <Icon
-                    className={clsx(
-                      classes.cardIcon,
-                      "material-icons-outlined"
-                    )}
-                  >
-                    list_alt
-                  </Icon>
+                    <Icon
+                      className={clsx(
+                        classes.cardIcon,
+                        "material-icons-outlined"
+                      )}
+                    >
+                      list_alt
+                    </Icon>
                   </Avatar>
                 </Grid>
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4" component="h4" 
+                    variant="h4"
+                    component="h4"
                     color="textSecondary"
                     gutterBottom
                   >

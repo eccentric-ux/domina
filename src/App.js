@@ -7,10 +7,11 @@ import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "./components/drawer";
 import routes from "./routes.config.json";
 import "./styles.css";
-import { IconButton } from "@material-ui/core";
+import { IconButton, Tooltip } from "@material-ui/core";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
+import Badge from "@material-ui/core/Badge";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -67,15 +68,25 @@ export default function App({ children }) {
               Domina
             </Typography>
             <div className={classes.actions}>
-              <IconButton>
-                <BarChartIcon />
-              </IconButton>
-              <IconButton>
-                <NotificationsNoneIcon />
-              </IconButton>
-              <IconButton>
-                <ExitToAppIcon />
-              </IconButton>
+              <Tooltip title="Statistics">
+                <IconButton>
+                  <Badge badgeContent={" "} variant="dot" color="primary">
+                    <BarChartIcon />
+                  </Badge>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Notifications">
+                <IconButton>
+                  <Badge badgeContent={4} color="error">
+                    <NotificationsNoneIcon />
+                  </Badge>
+                </IconButton>
+              </Tooltip>
+              <Tooltip title="Logout">
+                <IconButton>
+                  <ExitToAppIcon />
+                </IconButton>
+              </Tooltip>
             </div>
           </Toolbar>
         </AppBar>
