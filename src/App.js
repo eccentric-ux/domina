@@ -124,6 +124,13 @@ export default function App({ children }) {
                   className={classes.user}
                 >
                   Shubham
+                  <Typography
+                    color="textSecondary"
+                    variant="body2"
+                    gutterBottom
+                  >
+                    UI Developer
+                  </Typography>
                 </Typography>
                 <StyledBadge
                   overlap="circular"
