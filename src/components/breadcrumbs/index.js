@@ -15,7 +15,9 @@ const useStyles = makeStyles((theme) =>({
         justifyContent: "center"
     },
     avatar: {
-        backgroundColor: "rgba(67, 160, 71, 0.1)"
+        backgroundColor: "rgba(67, 160, 71, 0.1)",
+        height: "48px",
+        width: "48px"
     },
     icon: {
         color: theme.palette.primary.main
