@@ -5,6 +5,7 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import { makeStyles, withStyles } from "@material-ui/core/styles";
 import Drawer from "./components/drawer";
+import BreadCrumbs from "./components/breadcrumbs";
 import routes from "./routes.config.json";
 import "./styles.css";
 import { IconButton, Tooltip, Button } from "@material-ui/core";
@@ -13,6 +14,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 import Badge from "@material-ui/core/Badge";
 import logoSVG from "./assets/svgs/logo.svg";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
@@ -20,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   content: {
     flexGrow: 1,
     padding: theme.spacing(3),
-    height: "calc(100vh - 64px)",
+    height: "calc(100vh - 72px)",
   },
   pane: {
     flex: 1,
@@ -105,7 +107,7 @@ export default function App({ children }) {
       <div className={classes.pane}>
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h4" noWrap color="primary"></Typography>
+            <BreadCrumbs routes={routes} />
             <div className={classes.actions}>
               <Tooltip title="Statistics">
                 <IconButton>

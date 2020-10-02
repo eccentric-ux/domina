@@ -8,6 +8,17 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Icon from "@material-ui/core/Icon";
 import CountUp from "react-countup";
+import {
+  AreaChart,
+  Area,
+  XAxis,
+  YAxis,
+  LineChart,
+  Line,
+  Legend,
+  Tooltip,
+  ResponsiveContainer,
+} from "recharts";
 import SectionHeading from "../../views/SectionHeading/SectionHeading";
 
 const useStyles = makeStyles((theme) => ({
@@ -82,15 +93,59 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const data = [
+  {
+    name: "India",
+    uv: 4000,
+    pv: 2400,
+    amt: 2400,
+  },
+  {
+    name: "U.S.A",
+    uv: 3000,
+    pv: 1398,
+    amt: 2210,
+  },
+  {
+    name: "China",
+    uv: 2000,
+    pv: 9800,
+    amt: 2290,
+  },
+  {
+    name: "Nepal",
+    uv: 2780,
+    pv: 3908,
+    amt: 2000,
+  },
+  {
+    name: "U.K",
+    uv: 1890,
+    pv: 4800,
+    amt: 2181,
+  },
+  {
+    name: "France",
+    uv: 2390,
+    pv: 3800,
+    amt: 2500,
+  },
+  {
+    name: "Spain",
+    uv: 3490,
+    pv: 4300,
+    amt: 2100,
+  },
+];
+
 function Dashboard() {
   const classes = useStyles();
-  const bull = <span className={classes.bullet}>•</span>;
 
   return (
     <div className={classes.root}>
-      <SectionHeading subHeading={"Monday, 5th Oct 2020"}>
+      {/* <SectionHeading subHeading={"Monday, 5th Oct 2020"}>
         Dashboard
-      </SectionHeading>
+      </SectionHeading> */}
       <Grid container spacing={4}>
         <Grid item xs={3}>
           <Card
@@ -240,49 +295,76 @@ function Dashboard() {
       <Grid container spacing={4}>
         <Grid item xs={6}>
           <Card className={clsx(classes.root, classes.bottomCards)}>
-            <CardContent>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                Word of the Day
-              </Typography>
-              <Typography variant="h5" component="h2">
-                be{bull}nev{bull}o{bull}lent
-              </Typography>
-              <Typography className={classes.pos} color="textSecondary">
-                adjective
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
+            <CardContent style={{ height: 500, width: "100%" }}>
+              <ResponsiveContainer>
+                <AreaChart
+                  data={data}
+                  syncId="anyId"
+                  margin={{
+                    top: 10,
+                    right: 30,
+                    left: 0,
+                    bottom: 0,
+                  }}
+                >
+                  {/* <CartesianGrid strokeDasharray="3 3" /> */}
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Area
+                    type="monotone"
+                    dataKey="uv"
+                    stackId="1"
+                    stroke="#26c6da"
+                    fill="#26c6da"
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="pv"
+                    stackId="1"
+                    stroke="#66bb6a"
+                    fill="#66bb6a"
+                  />
+                  <Area
+                    type="monotone"
+                    dataKey="amt"
+                    stackId="1"
+                    stroke="#ffa726"
+                    fill="#ffa726"
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
             </CardContent>
           </Card>
         </Grid>
         <Grid item xs={6}>
           <Card className={clsx(classes.root, classes.bottomCards)}>
-            <CardContent>
-              <Typography
-                className={classes.title}
-                color="textSecondary"
-                gutterBottom
-              >
-                Word of the Day
-              </Typography>
-              <Typography variant="h5" component="h2">
-                be{bull}nev{bull}o{bull}lent
-              </Typography>
-              <Typography className={classes.pos} color="textSecondary">
-                adjective
-              </Typography>
-              <Typography variant="body2" component="p">
-                well meaning and kindly.
-                <br />
-                {'"a benevolent smile"'}
-              </Typography>
+            <CardContent style={{ height: 500, width: "100%" }}>
+              <ResponsiveContainer>
+                <LineChart
+                  width={500}
+                  height={300}
+                  data={data}
+                  margin={{
+                    top: 5,
+                    right: 30,
+                    left: 20,
+                    bottom: 5,
+                  }}
+                >
+                  <XAxis dataKey="name" />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <Line
+                    type="monotone"
+                    dataKey="pv"
+                    stroke="#8884d8"
+                    activeDot={{ r: 8 }}
+                  />
+                  <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                </LineChart>
+              </ResponsiveContainer>
             </CardContent>
           </Card>
         </Grid>
