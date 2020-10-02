@@ -88,7 +88,9 @@ function Dashboard() {
 
   return (
     <div className={classes.root}>
-      <SectionHeading>Dashboard</SectionHeading>
+      <SectionHeading subHeading={"Monday, 5th Oct 2020"}>
+        Dashboard
+      </SectionHeading>
       <Grid container spacing={4}>
         <Grid item xs={3}>
           <Card
