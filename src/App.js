@@ -8,7 +8,9 @@ import Drawer from "./components/drawer";
 import routes from "./routes.config.json";
 import "./styles.css";
 import { IconButton } from "@material-ui/core";
-import Icon from "@material-ui/core/Icon";
+import BarChartIcon from "@material-ui/icons/BarChart";
+import ExitToAppIcon from "@material-ui/icons/ExitToApp";
+import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -66,13 +68,13 @@ export default function App({ children }) {
             </Typography>
             <div className={classes.actions}>
               <IconButton>
-                <Icon>stacked_line_chart</Icon>
+                <BarChartIcon />
               </IconButton>
               <IconButton>
-                <Icon>notifications_none</Icon>
+                <NotificationsNoneIcon />
               </IconButton>
               <IconButton>
-                <Icon>exit_to_app</Icon>
+                <ExitToAppIcon />
               </IconButton>
             </div>
           </Toolbar>
