@@ -36,9 +36,11 @@ const useStyles = makeStyles((theme) => ({
     height: theme.spacing(7),
   },
   appbar: {
-    background: "white",
-    boxShadow:
-      "0px 6px 7px -4px rgba(182,186,191,0.2), 0px 11px 15px 1px rgba(182,186,191,0.18), 0px 4px 20px 3px rgba(182,186,191,0.16)",
+    background: "inherit",
+    boxShadow: "none",
+    marginTop: "0.5rem",
+    // boxShadow:
+    //   "0px 6px 7px -4px rgba(182,186,191,0.2), 0px 11px 15px 1px rgba(182,186,191,0.18), 0px 4px 20px 3px rgba(182,186,191,0.16)",
   },
   actions: {
     position: "absolute",
@@ -48,9 +50,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(2),
     textTransform: "initial",
     fontWeight: 700,
+    textAlign: "left",
   },
   userBtn: {
-    margin: "0 1rem",
+    margin: "0 0.5rem",
+    borderRadius: "1000px",
+    paddingLeft: "1.5rem",
   },
 }));
 const StyledBadge = withStyles((theme) => ({
@@ -100,9 +105,7 @@ export default function App({ children }) {
       <div className={classes.pane}>
         <AppBar position="static" className={classes.appbar}>
           <Toolbar>
-            <Typography variant="h5" noWrap color="primary">
-              Domina
-            </Typography>
+            <Typography variant="h4" noWrap color="primary"></Typography>
             <div className={classes.actions}>
               <Tooltip title="Statistics">
                 <IconButton>

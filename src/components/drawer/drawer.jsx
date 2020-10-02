@@ -97,6 +97,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     justifyContent: "center",
     color: theme.palette.primary.light,
+    fontWeight: "bolder",
   },
   list: {
     marginTop: "4rem",

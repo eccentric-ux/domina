@@ -8,6 +8,7 @@ import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 import Icon from "@material-ui/core/Icon";
 import CountUp from "react-countup";
+import SectionHeading from "../../views/SectionHeading/SectionHeading";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -87,6 +88,7 @@ function Dashboard() {
 
   return (
     <div className={classes.root}>
+      <SectionHeading>Dashboard</SectionHeading>
       <Grid container spacing={4}>
         <Grid item xs={3}>
           <Card
