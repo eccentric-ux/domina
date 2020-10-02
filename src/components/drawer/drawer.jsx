@@ -81,6 +81,10 @@ const useStyles = makeStyles((theme) => ({
     borderLeft: "6px solid transparent",
     "&:hover": {
       backgroundColor: "rgba(67,160,71, 0.1)",
+      color: theme.palette.primary.light,
+      width: "90%",
+      borderTopRightRadius: "1000px",
+      borderBottomRightRadius: "1000px",
     },
   },
 

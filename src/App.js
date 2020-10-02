@@ -46,6 +46,8 @@ const useStyles = makeStyles((theme) => ({
   },
   user: {
     marginRight: theme.spacing(2),
+    textTransform: "initial",
+    fontWeight: 700,
   },
   userBtn: {
     margin: "0 1rem",
@@ -123,7 +125,7 @@ export default function App({ children }) {
                   color="primary"
                   className={classes.user}
                 >
-                  Shubham
+                  Shubham K
                   <Typography
                     color="textSecondary"
                     variant="body2"
