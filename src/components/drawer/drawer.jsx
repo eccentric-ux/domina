@@ -92,9 +92,10 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
+    color: theme.palette.primary.light,
   },
   list: {
-    marginTop: "1rem",
+    marginTop: "4rem",
   },
   selected: {
     backgroundColor: "rgba(67,160,71, 0.1)",
@@ -102,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     "& .route-title > span": {
       fontWeight: "bolder",
     },
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.light,
     width: "90%",
     borderTopRightRadius: "1000px",
     borderBottomRightRadius: "1000px",
