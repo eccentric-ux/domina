@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
     background: "linear-gradient(60deg, #26c6da, #00acc1)",
   },
   topCards: {
+    position: "relative",
     borderTop: "4px solid",
     boxShadow:
       "0px 6px 7px -4px rgba(182,186,191,0.1), 0px 11px 15px 1px rgba(182,186,191,0.11), 0px 4px 20px 3px rgba(182,186,191,0.12)",
@@ -72,9 +73,11 @@ const useStyles = makeStyles((theme) => ({
   },
   cardRightContent: {
     display: "flex",
-    alignItems: "center",
+    alignItems: "flex-end",
     justifyContent: "center",
     flexDirection: "column",
+    position: "absolute",
+    right: theme.spacing(4),
   },
 }));
 
@@ -90,7 +93,7 @@ function Dashboard() {
             className={clsx(classes.root, classes.topCards, classes.yellowCard)}
           >
             <CardContent>
-              <Grid container>
+              <Grid container direction="row">
                 <Grid item xs={4}>
                   <Avatar className={clsx(classes.large, classes.yellowAvatar)}>
                     <Icon
@@ -106,8 +109,8 @@ function Dashboard() {
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4"
-                    component="h4"
+                    variant="h5"
+                    component="h5"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -142,8 +145,8 @@ function Dashboard() {
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4"
-                    component="h4"
+                    variant="h5"
+                    component="h5"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -178,8 +181,8 @@ function Dashboard() {
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4"
-                    component="h4"
+                    variant="h5"
+                    component="h5"
                     color="textSecondary"
                     gutterBottom
                   >
@@ -214,8 +217,8 @@ function Dashboard() {
                 <Grid item xs={8} className={classes.cardRightContent}>
                   <Typography
                     //className={classes.title}
-                    variant="h4"
-                    component="h4"
+                    variant="h5"
+                    component="h5"
                     color="textSecondary"
                     gutterBottom
                   >

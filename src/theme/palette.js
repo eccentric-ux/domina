@@ -8,11 +8,11 @@ export default {
   white,
   primary: {
     contrastText: white,
-    dark: "#2979ff",
+    dark: colors.teal[900],
     // main: "#2979ff",
-    //main: colors.indigo[500],
-    main: "rgb(108, 99, 255)",
-    light: "#2979ff",
+    main: colors.teal[800],
+    // main: "rgb(108, 99, 255)",
+    light: colors.teal[600],
   },
   secondary: {
     contrastText: white,
@@ -45,7 +45,7 @@ export default {
     light: colors.red[400],
   },
   text: {
-    primary: colors.blueGrey[900],
+    primary: colors.blueGrey[800],
     secondary: colors.blueGrey[600],
     link: colors.blue[600],
     disabled: colors.blueGrey[300],

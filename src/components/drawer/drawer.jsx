@@ -78,43 +78,55 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   menuItem: {
-    borderLeft: "6px solid transparent"
+    borderLeft: "6px solid transparent",
+    "&:hover": {
+      backgroundColor: "rgba(67,160,71, 0.1)",
+    },
   },
+
   nested: {
     paddingLeft: theme.spacing(10),
-    borderLeft: "6px solid transparent"
+    borderLeft: "6px solid transparent",
   },
   title: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center'
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   list: {
-    marginTop: "1rem"
+    marginTop: "1rem",
   },
   selected: {
-    backgroundColor: "rgba(0, 0, 0, 0.09)",
-    borderLeft: "6px solid rgb(108, 99, 255)",
-    '& .route-title > span': {
-      fontWeight: 'bolder'
+    backgroundColor: "rgba(67,160,71, 0.1)",
+    borderLeft: "6px solid rgb(0,105,92)",
+    "& .route-title > span": {
+      fontWeight: "bolder",
     },
-    '& .icon': {
-      "fontFamily": "'Material Icons'",
-      "fontWeight": "normal",
-      "fontStyle": "normal",
-      "fontSize": "24px",
-      "lineHeight": "1",
-      "letterSpacing": "normal",
-      "textTransform": "none",
-      "display": "inline-block",
-      "whiteSpace": "nowrap",
-      "wordWrap": "normal",
-      "direction": "ltr",
-      "WebkitFontFeatureSettings": "'liga'",
-      "WebkitFontSmoothing": "antialiased",
-      "color": theme.palette.primary.main
-    }
-  }
+    color: theme.palette.primary.main,
+    width: "90%",
+    borderTopRightRadius: "1000px",
+    borderBottomRightRadius: "1000px",
+    "& .icon": {
+      fontFamily: "'Material Icons'",
+      fontWeight: "normal",
+      fontStyle: "normal",
+      fontSize: "24px",
+      lineHeight: "1",
+      letterSpacing: "normal",
+      textTransform: "none",
+      display: "inline-block",
+      whiteSpace: "nowrap",
+      wordWrap: "normal",
+      direction: "ltr",
+      WebkitFontFeatureSettings: "'liga'",
+      WebkitFontSmoothing: "antialiased",
+      color: theme.palette.primary.main,
+    },
+    "&:hover": {
+      backgroundColor: "rgba(67,160,71, 0.1)",
+      borderLeft: "6px solid rgb(0,105,92)",
+    },
+  },
 }));
 
 function SubMenu({ route, classes, disableParentLink }) {
@@ -128,14 +140,21 @@ function SubMenu({ route, classes, disableParentLink }) {
           to: route.route,
           value: route.route,
           activeClassName: classes.selected,
-          exact: true
+          exact: true,
         };
 
   return (
     <>
-      <ListItem button onClick={handleOpen} className={classes.menuItem} {...parentProps}>
+      <ListItem
+        button
+        onClick={handleOpen}
+        className={classes.menuItem}
+        {...parentProps}
+      >
         <ListItemIcon>
-          {route.icon && <Icon className="icon material-icons-outlined">{route.icon}</Icon>}
+          {route.icon && (
+            <Icon className="icon material-icons-outlined">{route.icon}</Icon>
+          )}
         </ListItemIcon>
         <ListItemText primary={route.title} className="route-title" />
         {route.children &&
@@ -186,7 +205,11 @@ function CustomDrawer({ routes = [], logo, disableParentLink = false }) {
       }}
     >
       {logo}
-      {open  && <Typography variant="h4" className={classes.title}>Eccentric UX</Typography>}
+      {open && (
+        <Typography variant="h4" className={classes.title}>
+          Eccentric UX
+        </Typography>
+      )}
       <List className={classes.list}>
         {routes.map((route, index) => (
           <SubMenu
