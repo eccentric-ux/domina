@@ -126,10 +126,10 @@ export default function App({ children }) {
                   Shubham
                 </Typography>
                 <StyledBadge
-                  overlap="circle"
+                  overlap="circular"
                   anchorOrigin={{
                     vertical: "bottom",
-                    horizontal: "left",
+                    horizontal: "right",
                   }}
                   variant="dot"
                 >
