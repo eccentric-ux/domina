@@ -10,6 +10,7 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import SwipeableViews from "react-swipeable-views";
 import Box from "@material-ui/core/Box";
+import Messages from './messages';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -23,7 +24,7 @@ function TabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box p={3}>
+        <Box p={0}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -51,7 +52,7 @@ const tabs = ({ classes, value }) => [
   {
     key: "timeline",
     label: (
-      <div className={classes.tabTitle}>
+      <div className={classes.tabTitle} style={value === 0 ? {color: "#e53935"} : {}}>
         <Icon className={value !== 0 && "material-icons-outlined"}>
           timeline
         </Icon>
@@ -62,7 +63,7 @@ const tabs = ({ classes, value }) => [
   {
     key: "messages",
     label: (
-      <div className={classes.tabTitle}>
+      <div className={classes.tabTitle} style={value === 1 ? {color: "#e53935"} : {}}>
         <Badge badgeContent={" "} variant="dot" color="error">
           <Icon className={value !== 1 && "material-icons-outlined"}>
             email
@@ -75,7 +76,7 @@ const tabs = ({ classes, value }) => [
   {
     key: "report",
     label: (
-      <div className={classes.tabTitle}>
+      <div className={classes.tabTitle} style={value === 2 ? {color: "#e53935"} : {}}>
         <Icon className={value !== 2 && "material-icons-outlined"}>
           analytics
         </Icon>
@@ -159,7 +160,7 @@ function Notifications() {
               Item One
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-              Item Two
+              <Messages />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
               Item Three
