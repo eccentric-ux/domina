@@ -10,7 +10,8 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import SwipeableViews from "react-swipeable-views";
 import Box from "@material-ui/core/Box";
-import Messages from './messages';
+import Messages from "./messages";
+import UnderProgress from "../../pages/under-progress";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +53,10 @@ const tabs = ({ classes, value }) => [
   {
     key: "timeline",
     label: (
-      <div className={classes.tabTitle} style={value === 0 ? {color: "#e53935"} : {}}>
+      <div
+        className={classes.tabTitle}
+        style={value === 0 ? { color: "#e53935" } : {}}
+      >
         <Icon className={value !== 0 && "material-icons-outlined"}>
           timeline
         </Icon>
@@ -63,7 +67,10 @@ const tabs = ({ classes, value }) => [
   {
     key: "messages",
     label: (
-      <div className={classes.tabTitle} style={value === 1 ? {color: "#e53935"} : {}}>
+      <div
+        className={classes.tabTitle}
+        style={value === 1 ? { color: "#e53935" } : {}}
+      >
         <Badge badgeContent={" "} variant="dot" color="error">
           <Icon className={value !== 1 && "material-icons-outlined"}>
             email
@@ -76,7 +83,10 @@ const tabs = ({ classes, value }) => [
   {
     key: "report",
     label: (
-      <div className={classes.tabTitle} style={value === 2 ? {color: "#e53935"} : {}}>
+      <div
+        className={classes.tabTitle}
+        style={value === 2 ? { color: "#e53935" } : {}}
+      >
         <Icon className={value !== 2 && "material-icons-outlined"}>
           analytics
         </Icon>
@@ -157,13 +167,13 @@ function Notifications() {
             onChangeIndex={handleChangeTabIndex}
           >
             <TabPanel value={value} index={0} dir={theme.direction}>
-              Item One
+              <UnderProgress />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
               <Messages />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              Item Three
+              <UnderProgress />
             </TabPanel>
           </SwipeableViews>
         </div>
