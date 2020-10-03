@@ -295,7 +295,7 @@ function Dashboard() {
       <Grid container spacing={4}>
         <Grid item xs={6}>
           <Card className={clsx(classes.root, classes.bottomCards)}>
-            <CardContent style={{ height: 500, width: "100%" }}>
+            <CardContent style={{ height: "50vh", width: "100%" }}>
               <ResponsiveContainer>
                 <AreaChart
                   data={data}
@@ -339,11 +339,9 @@ function Dashboard() {
         </Grid>
         <Grid item xs={6}>
           <Card className={clsx(classes.root, classes.bottomCards)}>
-            <CardContent style={{ height: 500, width: "100%" }}>
+            <CardContent style={{ height: "50vh", width: "100%" }}>
               <ResponsiveContainer>
                 <LineChart
-                  width={500}
-                  height={300}
                   data={data}
                   margin={{
                     top: 5,
