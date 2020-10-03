@@ -1,20 +1,21 @@
-import * as React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import Divider from '@material-ui/core/Divider';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import Avatar from '@material-ui/core/Avatar';
-import Typography from '@material-ui/core/Typography';
+import * as React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListSubheader from "@material-ui/core/ListSubheader";
+import Divider from "@material-ui/core/Divider";
+import ListItemText from "@material-ui/core/ListItemText";
+import ListItemAvatar from "@material-ui/core/ListItemAvatar";
+import Avatar from "@material-ui/core/Avatar";
+import Typography from "@material-ui/core/Typography";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
     backgroundColor: theme.palette.background.paper,
   },
   inline: {
-    display: 'inline',
+    display: "inline",
   },
 }));
 
@@ -22,10 +23,21 @@ export default function Messages() {
   const classes = useStyles();
 
   return (
-    <List className={classes.root}>
+    <List
+      className={classes.root}
+      aria-labelledby="notitifications-title"
+      subheader={
+        <ListSubheader component="div" id="notitifications-title">
+          Messages
+        </ListSubheader>
+      }
+    >
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="https://next--material-ui.netlify.app/static/images/avatar/1.jpg" />
+          <Avatar
+            alt="Remy Sharp"
+            src="https://next--material-ui.netlify.app/static/images/avatar/1.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Brunch this weekend?"
@@ -47,7 +59,10 @@ export default function Messages() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="https://next--material-ui.netlify.app/static/images/avatar/2.jpg" />
+          <Avatar
+            alt="Travis Howard"
+            src="https://next--material-ui.netlify.app/static/images/avatar/2.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Summer BBQ"
@@ -69,7 +84,10 @@ export default function Messages() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="https://next--material-ui.netlify.app/static/images/avatar/3.jpg" />
+          <Avatar
+            alt="Cindy Baker"
+            src="https://next--material-ui.netlify.app/static/images/avatar/3.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Oui Oui"
@@ -83,7 +101,7 @@ export default function Messages() {
               >
                 Sandra Adams
               </Typography>
-              {' — Do you have Paris recommendations? Have you ever…'}
+              {" — Do you have Paris recommendations? Have you ever…"}
             </React.Fragment>
           }
         />
@@ -91,7 +109,10 @@ export default function Messages() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Remy Sharp" src="https://next--material-ui.netlify.app/static/images/avatar/1.jpg" />
+          <Avatar
+            alt="Remy Sharp"
+            src="https://next--material-ui.netlify.app/static/images/avatar/1.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Brunch this weekend?"
@@ -113,7 +134,10 @@ export default function Messages() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Travis Howard" src="https://next--material-ui.netlify.app/static/images/avatar/2.jpg" />
+          <Avatar
+            alt="Travis Howard"
+            src="https://next--material-ui.netlify.app/static/images/avatar/2.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Summer BBQ"
@@ -135,7 +159,10 @@ export default function Messages() {
       <Divider variant="inset" component="li" />
       <ListItem alignItems="flex-start">
         <ListItemAvatar>
-          <Avatar alt="Cindy Baker" src="https://next--material-ui.netlify.app/static/images/avatar/3.jpg" />
+          <Avatar
+            alt="Cindy Baker"
+            src="https://next--material-ui.netlify.app/static/images/avatar/3.jpg"
+          />
         </ListItemAvatar>
         <ListItemText
           primary="Oui Oui"
@@ -149,7 +176,7 @@ export default function Messages() {
               >
                 Sandra Adams
               </Typography>
-              {' — Do you have Paris recommendations? Have you ever…'}
+              {" — Do you have Paris recommendations? Have you ever…"}
             </React.Fragment>
           }
         />
