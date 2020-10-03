@@ -11,7 +11,7 @@ import "./styles.css";
 import { IconButton, Tooltip, Button } from "@material-ui/core";
 import BarChartIcon from "@material-ui/icons/BarChart";
 import ExitToAppIcon from "@material-ui/icons/ExitToApp";
-import NotificationsNoneIcon from "@material-ui/icons/NotificationsNone";
+import Notifications from "./components/notifications";
 import Badge from "@material-ui/core/Badge";
 import logoSVG from "./assets/svgs/logo.svg";
 
@@ -116,13 +116,7 @@ export default function App({ children }) {
                   </Badge>
                 </IconButton>
               </Tooltip>
-              <Tooltip title="Notifications">
-                <IconButton>
-                  <Badge badgeContent={4} color="error">
-                    <NotificationsNoneIcon />
-                  </Badge>
-                </IconButton>
-              </Tooltip>
+              <Notifications />
               <Button className={classes.userBtn}>
                 <Typography
                   variant="h5"
@@ -153,11 +147,6 @@ export default function App({ children }) {
                   />
                 </StyledBadge>
               </Button>
-              <Tooltip title="Logout">
-                <IconButton>
-                  <ExitToAppIcon />
-                </IconButton>
-              </Tooltip>
             </div>
           </Toolbar>
         </AppBar>
