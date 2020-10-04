@@ -11,6 +11,7 @@ import Tab from "@material-ui/core/Tab";
 import SwipeableViews from "react-swipeable-views";
 import Box from "@material-ui/core/Box";
 import Messages from "./messages";
+import Timeline from "./timeline";
 import UnderProgress from "../../pages/under-progress";
 
 function TabPanel(props) {
@@ -167,7 +168,7 @@ function Notifications() {
             onChangeIndex={handleChangeTabIndex}
           >
             <TabPanel value={value} index={0} dir={theme.direction}>
-              <UnderProgress />
+              <Timeline />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
               <Messages />
