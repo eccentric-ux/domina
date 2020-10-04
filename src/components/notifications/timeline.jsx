@@ -22,7 +22,8 @@ const useStyles = makeStyles(() => ({
   },
   avatarGroup: {
     alignItems: "center",
-    justifyContent: "flex-end" 
+    justifyContent: "flex-end",
+    marginTop: "5px"
   }
 }));
 
