@@ -91,6 +91,26 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: theme.spacing(4),
   },
+  subscript1: {
+    color: "#fb8c00",
+    marginRight: "0.7rem",
+    fontSize: "1.2rem",
+  },
+  subscript2: {
+    color: "#43a047",
+    marginRight: "0.7rem",
+    fontSize: "1.2rem",
+  },
+  subscript3: {
+    color: "#e53935",
+    marginRight: "0.7rem",
+    fontSize: "1.2rem",
+  },
+  subscript4: {
+    color: "#00acc1",
+    marginRight: "0.7rem",
+    fontSize: "1.2rem",
+  },
 }));
 
 const data = [
@@ -176,6 +196,9 @@ function Dashboard() {
                     VISITORS
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
+                    <Typography component="span" className={classes.subscript1}>
+                      102<Icon>arrow_upward</Icon>
+                    </Typography>
                     <CountUp end={1024} separator="," />
                   </Typography>
                 </Grid>
@@ -212,6 +235,9 @@ function Dashboard() {
                     SALES
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
+                    <Typography component="span" className={classes.subscript2}>
+                      57.3<Icon>arrow_downward</Icon>
+                    </Typography>
                     <CountUp end={1200} prefix="$" separator="," />
                   </Typography>
                 </Grid>
@@ -248,6 +274,9 @@ function Dashboard() {
                     SUBSCRIPTIONS
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
+                    <Typography component="span" className={classes.subscript3}>
+                      135<Icon>arrow_upward</Icon>
+                    </Typography>
                     <CountUp end={1405} separator="," />
                   </Typography>
                 </Grid>
@@ -284,6 +313,9 @@ function Dashboard() {
                     ORDERS
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
+                    <Typography component="span" className={classes.subscript4}>
+                      34<Icon>arrow_downward</Icon>
+                    </Typography>
                     <CountUp end={1305} separator="," />
                   </Typography>
                 </Grid>
@@ -323,7 +355,7 @@ function Dashboard() {
                     dataKey="pv"
                     stackId="1"
                     stroke="#66bb6a"
-                    fill="#66bb6a"
+                    fill="#8bc34a"
                   />
                   <Area
                     type="monotone"
