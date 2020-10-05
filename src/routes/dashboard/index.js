@@ -163,9 +163,10 @@ function Dashboard() {
 
   return (
     <div className={classes.root}>
-      <SectionHeading subHeading={"Monday, 5th Oct 2020"}>
+      <SectionHeading subHeading={"Monday, 5th Oct 2020"} sync>
         Dashboard
       </SectionHeading>
+
       <Grid container spacing={4}>
         <Grid item xs={3}>
           <Card
