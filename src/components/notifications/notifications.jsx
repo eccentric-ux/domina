@@ -12,7 +12,7 @@ import SwipeableViews from "react-swipeable-views";
 import Box from "@material-ui/core/Box";
 import Messages from "./messages";
 import Timeline from "./timeline";
-import UnderProgress from "../../pages/under-progress";
+import Report from './report';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -174,7 +174,7 @@ function Notifications() {
               <Messages />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              <UnderProgress />
+              <Report />
             </TabPanel>
           </SwipeableViews>
         </div>
