@@ -1,20 +1,20 @@
 import React from "react";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import IconButton from "@material-ui/core/IconButton";
+import Tooltip from "@material-ui/core/Tooltip";
+import BarChartIcon from "@material-ui/icons/BarChart";
+import Badge from "@material-ui/core/Badge";
+import { withRouter } from "react-router";
 import Drawer from "./components/drawer";
 import BreadCrumbs from "./components/breadcrumbs";
-import routes from "./routes.config.json";
-import "./styles.css";
-import { IconButton, Tooltip, Button } from "@material-ui/core";
-import BarChartIcon from "@material-ui/icons/BarChart";
-import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Notifications from "./components/notifications";
-import Badge from "@material-ui/core/Badge";
+import UserMenu from "./components/user-menu";
+import routes from "./routes.config.json"; 
 import logoSVG from "./assets/svgs/logo.svg";
-import { withRouter } from "react-router";
+import "./styles.css";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -49,49 +49,11 @@ const useStyles = makeStyles((theme) => ({
     position: "absolute",
     right: theme.spacing(3),
   },
-  user: {
-    marginRight: theme.spacing(2),
-    textTransform: "initial",
-    fontWeight: 700,
-    textAlign: "left",
-  },
-  userBtn: {
-    margin: "0 0.5rem",
-    borderRadius: "1000px",
-    paddingLeft: "1.5rem",
-  },
   login: {
     backgroundColor: "rgb(247, 249, 252)",
   },
 }));
-const StyledBadge = withStyles((theme) => ({
-  badge: {
-    backgroundColor: "#44b700",
-    color: "#44b700",
-    boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
-    "&::after": {
-      position: "absolute",
-      top: 0,
-      left: 0,
-      width: "100%",
-      height: "100%",
-      borderRadius: "50%",
-      animation: "$ripple 1.2s infinite ease-in-out",
-      border: "1px solid currentColor",
-      content: '""',
-    },
-  },
-  "@keyframes ripple": {
-    "0%": {
-      transform: "scale(.8)",
-      opacity: 1,
-    },
-    "100%": {
-      transform: "scale(2.4)",
-      opacity: 0,
-    },
-  },
-}))(Badge);
+
 const logo = (classes) => (
   <div className={classes.logoContainer}>
     <Avatar
@@ -126,36 +88,7 @@ function App({ children, location }) {
                 </IconButton>
               </Tooltip>
               <Notifications />
-              <Button className={classes.userBtn}>
-                <Typography
-                  variant="h5"
-                  noWrap
-                  color="primary"
-                  className={classes.user}
-                >
-                  Shubham K
-                  <Typography
-                    color="textSecondary"
-                    variant="body2"
-                    gutterBottom
-                  >
-                    UI Developer
-                  </Typography>
-                </Typography>
-                <StyledBadge
-                  overlap="circular"
-                  anchorOrigin={{
-                    vertical: "bottom",
-                    horizontal: "right",
-                  }}
-                  variant="dot"
-                >
-                  <Avatar
-                    alt="logo"
-                    src="https://www.californiamuseum.org/sites/main/files/imagecache/medium/main-images/screen_shot_2012-07-27_at_6.32.28_pm.png?1578063880"
-                  />
-                </StyledBadge>
-              </Button>
+              <UserMenu />
             </div>
           </Toolbar>
         </AppBar>
