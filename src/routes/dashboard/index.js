@@ -198,7 +198,8 @@ function Dashboard() {
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
                     <Typography component="span" className={classes.subscript1}>
-                      102<Icon>arrow_upward</Icon>
+                      <CountUp end={102} />
+                      <Icon>arrow_upward</Icon>
                     </Typography>
                     <CountUp end={1024} separator="," />
                   </Typography>
@@ -237,7 +238,8 @@ function Dashboard() {
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
                     <Typography component="span" className={classes.subscript2}>
-                      57.3<Icon>arrow_downward</Icon>
+                      <CountUp end={57.3} />
+                      <Icon>arrow_downward</Icon>
                     </Typography>
                     <CountUp end={1200} prefix="$" separator="," />
                   </Typography>
@@ -276,7 +278,8 @@ function Dashboard() {
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
                     <Typography component="span" className={classes.subscript3}>
-                      135<Icon>arrow_upward</Icon>
+                      <CountUp end={135} />
+                      <Icon>arrow_upward</Icon>
                     </Typography>
                     <CountUp end={1405} separator="," />
                   </Typography>
@@ -315,7 +318,8 @@ function Dashboard() {
                   </Typography>
                   <Typography variant="h1" component="h1" gutterBottom>
                     <Typography component="span" className={classes.subscript4}>
-                      34<Icon>arrow_downward</Icon>
+                      <CountUp end={34} />
+                      <Icon>arrow_downward</Icon>
                     </Typography>
                     <CountUp end={1305} separator="," />
                   </Typography>
