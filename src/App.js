@@ -14,6 +14,7 @@ import ExitToAppIcon from "@material-ui/icons/ExitToApp";
 import Notifications from "./components/notifications";
 import Badge from "@material-ui/core/Badge";
 import logoSVG from "./assets/svgs/logo.svg";
+import { withRouter } from "react-router";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -59,6 +60,9 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "1000px",
     paddingLeft: "1.5rem",
   },
+  login: {
+    backgroundColor: "rgb(247, 249, 252)",
+  },
 }));
 const StyledBadge = withStyles((theme) => ({
   badge: {
@@ -99,8 +103,13 @@ const logo = (classes) => (
   </div>
 );
 
-export default function App({ children }) {
+function App({ children, location }) {
+  const isLoginRoute = location.pathname === "/login";
   const classes = useStyles();
+
+  if (isLoginRoute) {
+    return <main className={classes.login}>{children}</main>;
+  }
   return (
     <div className={classes.root}>
       <Drawer routes={routes} disableParentLink logo={logo(classes)} />
@@ -155,3 +164,5 @@ export default function App({ children }) {
     </div>
   );
 }
+
+export default withRouter(App);
