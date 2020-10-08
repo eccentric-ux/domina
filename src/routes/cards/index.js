@@ -7,16 +7,16 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
+import SectionHeading from "../../views/SectionHeading/SectionHeading";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    display: "flex",
     height: "100%",
     width: "100%",
   },
   card: {
     maxWidth: 345,
-    height: 300
+    height: 300,
   },
 }));
 
@@ -25,6 +25,11 @@ function Cards() {
 
   return (
     <div className={classes.root}>
+      <div style={{ width: "100%" }}>
+        <SectionHeading subHeading={"Monday, 5th Oct 2020"} sync>
+          Cards
+        </SectionHeading>
+      </div>
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
