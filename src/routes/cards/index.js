@@ -19,6 +19,9 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
     height: 300,
   },
+  cardContainer: {
+    display: "flex"
+  }
 }));
 
 function Cards() {
@@ -31,7 +34,7 @@ function Cards() {
           Cards
         </SectionHeading>
       </div>
-      <Grid contianer spacing={3}>
+      <Grid contianer spacing={3} className={classes.cardContainer}>
         <Grid item xs={6} md={6}>
           <Card className={classes.card}>
             <CardActionArea>
