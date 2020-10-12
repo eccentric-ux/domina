@@ -41,7 +41,7 @@ function Router() {
     },
   ];
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <App>
         <Suspense fallback={<TopProgress />}>
           <Switch>
