@@ -1,0 +1,1 @@
+{"version":3,"sources":["components/tabs/tabs.jsx"],"names":["CustomTab"],"mappings":"wJAOeA,UAJf,WACE,OAAO,cAAC,IAAD","file":"static/js/9.1c877a84.chunk.js","sourcesContent":["import React from \"react\";\r\nimport Tabs from \"@material-ui/core/Tab\";\r\n\r\nfunction CustomTab() {\r\n  return <Tabs></Tabs>;\r\n}\r\n\r\nexport default CustomTab;\r\n"],"sourceRoot":""}

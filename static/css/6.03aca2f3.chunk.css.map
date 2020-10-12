@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/views/SectionHeading/SectionHeading.css"],"names":[],"mappings":"AAAA,iBACE,UAAW,CACX,kBACF","file":"6.03aca2f3.chunk.css","sourcesContent":[".section__header {\r\n  width: 100%;\r\n  margin-bottom: 2rem;\r\n}\r\n"]}
