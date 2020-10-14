@@ -18,10 +18,19 @@ const useStyles = makeStyles((theme) => ({
   card: {
     maxWidth: 345,
     height: 300,
+    overflow: "unset"
   },
   cardContainer: {
     display: "flex",
   },
+  topImage: {
+    marginTop: "-10px",
+    float: "left",
+    padding: "15px",
+    marginTop: "-20px",
+    marginRight: "15px",
+    borderRadius: "3px"
+  }
 }));
 
 function Cards() {
@@ -37,14 +46,15 @@ function Cards() {
       <Grid contianer spacing={3} className={classes.cardContainer}>
         <Grid item xs={6} md={4}>
           <Card className={classes.card}>
-            <CardActionArea>
-              <CardMedia
+          <CardMedia
                 component="img"
                 alt="Contemplative Reptile"
                 height="140"
                 image="https://next--material-ui.netlify.app/static/images/cards/contemplative-reptile.jpg"
                 title="Contemplative Reptile"
+                className={classes.topImage}
               />
+            <CardActionArea>
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
                   Lizard
