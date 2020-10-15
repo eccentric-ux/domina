@@ -24,10 +24,9 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
   },
   topImage: {
-    marginTop: "-10px",
+    padding: "0 20px",
+    marginTop: "-50px",
     float: "left",
-    padding: "15px",
-    marginTop: "-20px",
     marginRight: "15px",
     borderRadius: "3px"
   }
