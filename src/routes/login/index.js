@@ -44,6 +44,7 @@ const useStyles = makeStyles((theme) => ({
     width: theme.spacing(10),
     height: theme.spacing(10),
     marginTop: "0.4rem",
+    transform: "translate",
   },
   signinBtn: {
     width: "100%",
