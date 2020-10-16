@@ -50,7 +50,7 @@ function BreadCrumbs({ location, routes }) {
   return (
     <div className={classes.root}>
       <Avatar className={classes.avatar}>
-        <Icon className={classes.icon}>{`${path[0].icon}`}</Icon>
+        <Icon className={classes.icon}>{`${(path[0] || {}).icon}`}</Icon>
       </Avatar>
       <MUIBreadcrumbs
         separator={<Icon>navigate_next</Icon>}

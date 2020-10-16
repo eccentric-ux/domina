@@ -77,7 +77,7 @@ function Login({ history }) {
   const classes = useStyles();
 
   const signInHandler = () => {
-    history.push("/tabs");
+    history.push("/dashboard");
   };
   return (
     <div className={classes.root}>
