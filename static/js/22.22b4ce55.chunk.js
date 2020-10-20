@@ -1,2 +1,0 @@
-(this["webpackJsonpdashboard-app"]=this["webpackJsonpdashboard-app"]||[]).push([[22],{695:function(a,s,p){"use strict";p.r(s),s.default=p.p+"static/media/404.4861ae77.svg"}}]);
-//# sourceMappingURL=22.22b4ce55.chunk.js.map

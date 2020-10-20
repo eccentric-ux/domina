@@ -1,0 +1,2 @@
+(this["webpackJsonpdashboard-app"]=this["webpackJsonpdashboard-app"]||[]).push([[11],{415:function(a){a.exports=JSON.parse('{"name":"drawer","version":"1.0.0","private":true,"main":"./index.js"}')}}]);
+//# sourceMappingURL=11.d66c1b70.chunk.js.map
